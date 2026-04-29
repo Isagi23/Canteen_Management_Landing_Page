@@ -92,7 +92,7 @@ export function Footer() {
               © {currentYear} Canteen Management System. All rights reserved.
             </p>
             <div className="flex gap-6 text-sm text-gray-500">
-              <span>Capstone Project</span>
+              <span>Application Development</span>
               <span>•</span>
               <span>Built with Android & Firebase</span>
             </div>
