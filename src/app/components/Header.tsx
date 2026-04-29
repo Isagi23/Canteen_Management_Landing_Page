@@ -21,6 +21,16 @@ export function Header() {
     }
   };
 
+  const downloadApk = () => {
+    const link = document.createElement('a');
+    link.href = '/Canteen_Management_Landing_Page/canteen-management-system.apk';
+    link.download = 'canteen-management-system.apk';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    setIsMobileMenuOpen(false);
+  };
+
   const navItems = [
     { label: 'Home', id: 'home' },
     { label: 'Overview', id: 'overview' },
@@ -65,7 +75,7 @@ export function Header() {
               </button>
             ))}
             <button
-              onClick={() => scrollToSection('contact')}
+              onClick={downloadApk}
               className="inline-flex items-center justify-center whitespace-nowrap rounded-full px-5 py-2 text-sm font-medium text-white transition-colors shadow-sm"
               style={{ backgroundColor: 'var(--primary)' }}
               onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'var(--primary-dark)'}
@@ -99,7 +109,7 @@ export function Header() {
               </button>
             ))}
             <button
-              onClick={() => scrollToSection('contact')}
+              onClick={downloadApk}
               className="w-full mt-4 text-white px-6 py-3 rounded-full transition-colors shadow-sm"
               style={{ backgroundColor: 'var(--primary)' }}
               onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'var(--primary-dark)'}
