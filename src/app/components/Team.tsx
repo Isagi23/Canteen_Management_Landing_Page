@@ -1,24 +1,26 @@
 import { Users, Code, Palette, Briefcase } from 'lucide-react';
+import rueloImage from '../../imports/RUELO, MARK JASON.jpg';
+import abuganImage from '../../imports/abugan.png';
 
 export function Team() {
   const teamMembers = [
+    {
+      name: 'RUELO, MARK JASON',
+      role: 'Lead Developer',
+      description: 'Implements core functionality, Firebase integration, and system architecture',
+      image: rueloImage,
+    },
+    {
+      name: 'ABUGAN',
+      role: 'UI/UX Designer',
+      description: 'Creates intuitive designs following Material Design principles',
+      image: abuganImage,
+    },
     {
       name: 'Project Lead',
       role: 'System Architect & Project Manager',
       description: 'Oversees development, ensures project alignment with business goals',
       icon: Briefcase,
-    },
-    {
-      name: 'Lead Developer',
-      role: 'Android & Backend Development',
-      description: 'Implements core functionality, Firebase integration, and system architecture',
-      icon: Code,
-    },
-    {
-      name: 'UI/UX Designer',
-      role: 'Interface Design & User Experience',
-      description: 'Creates intuitive designs following Material Design principles',
-      icon: Palette,
     },
     {
       name: 'QA Specialist',
@@ -47,9 +49,15 @@ export function Team() {
               className="group text-center"
             >
               <div className="relative mb-6">
-                <div className="w-32 h-32 mx-auto rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300" style={{ background: 'linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%)' }}>
-                  <member.icon className="text-white" size={48} />
-                </div>
+                {member.image ? (
+                  <div className="w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-white shadow-lg group-hover:scale-110 transition-transform duration-300 bg-white">
+                    <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
+                  </div>
+                ) : (
+                  <div className="w-32 h-32 mx-auto rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300" style={{ background: 'linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%)' }}>
+                    <member.icon className="text-white" size={48} />
+                  </div>
+                )}
                 <div className="absolute inset-0 w-32 h-32 mx-auto rounded-full blur-xl opacity-0 group-hover:opacity-50 transition-opacity duration-300 -z-10" style={{ backgroundColor: 'var(--tertiary)' }}></div>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">{member.name}</h3>
