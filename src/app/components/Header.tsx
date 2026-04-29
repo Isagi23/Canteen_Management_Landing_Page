@@ -23,8 +23,8 @@ export function Header() {
 
   const downloadApk = () => {
     const link = document.createElement('a');
-    link.href = '/Canteen_Management_Landing_Page/canteen-management-system.apk';
-    link.download = 'canteen-management-system.apk';
+    link.href = '/Canteen_Management_Landing_Page/canteen_salary-deduct_system.apk';
+    link.download = 'canteen_salary-deduct_system.apk';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
