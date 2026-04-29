@@ -1,55 +1,65 @@
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { motion } from 'motion/react';
+import loginScreen from '../../imports/b9ad11a7-322b-4eee-a816-eec204a31ab4.jpg';
+import dashboardScreen from '../../imports/ec6a9ee8-7f71-4b42-8915-1e822d5b8955.jpg';
+import staffManagementScreen from '../../imports/f36ab7bd-3202-4bb1-8e20-3c7e5c41d369.jpg';
+import recordOrderScreen from '../../imports/ffd9dd55-b138-4ae6-b472-4fbe0abaa5ca.jpg';
+import transactionHistoryScreen from '../../imports/256c2f8b-9876-4804-ad44-02f8d9397106.jpg';
+import reportsScreen from '../../imports/30815947-7460-4dbd-935a-bfef656fd223.jpg';
+import deductionSummaryScreen from '../../imports/a0f6ce1c-4a37-4621-8c6b-1a29bb0f543b.jpg';
+import employeeDetailsScreen from '../../imports/a8b7b0be-6cd7-4988-9d54-fde01cdd5776.jpg';
+import settingsScreen from '../../imports/1df8c8bc-0da2-4954-8865-09c160a68617.jpg';
+import profileManagementScreen from '../../imports/2c0888e4-60f8-4509-b8e1-3eb35d48ca75.jpg';
 
 export function AppPreview() {
   const screenshots = [
     {
-      src: 'src/imports/b9ad11a7-322b-4eee-a816-eec204a31ab4.jpg',
+      src: loginScreen,
       title: 'Login Screen',
       description: 'Secure authentication with role-based access',
     },
     {
-      src: 'src/imports/ec6a9ee8-7f71-4b42-8915-1e822d5b8955.jpg',
+      src: dashboardScreen,
       title: 'Dashboard',
       description: 'Real-time overview of all canteen operations',
     },
     {
-      src: 'src/imports/f36ab7bd-3202-4bb1-8e20-3c7e5c41d369.jpg',
+      src: staffManagementScreen,
       title: 'Staff Management',
       description: 'Manage employees and their information',
     },
     {
-      src: 'src/imports/ffd9dd55-b138-4ae6-b472-4fbe0abaa5ca.jpg',
+      src: recordOrderScreen,
       title: 'Record Order',
       description: 'Digital order entry replacing paper-based system',
     },
     {
-      src: 'src/imports/256c2f8b-9876-4804-ad44-02f8d9397106.jpg',
+      src: transactionHistoryScreen,
       title: 'Transaction History',
       description: 'Complete audit trail of all orders',
     },
     {
-      src: 'src/imports/30815947-7460-4dbd-935a-bfef656fd223.jpg',
+      src: reportsScreen,
       title: 'Reports',
       description: 'Comprehensive reporting and analytics',
     },
     {
-      src: 'src/imports/a0f6ce1c-4a37-4621-8c6b-1a29bb0f543b.jpg',
+      src: deductionSummaryScreen,
       title: 'Deduction Summary',
       description: 'Automated salary deduction calculations',
     },
     {
-      src: 'src/imports/a8b7b0be-6cd7-4988-9d54-fde01cdd5776.jpg',
+      src: employeeDetailsScreen,
       title: 'Employee Details',
       description: 'Detailed view of staff information',
     },
     {
-      src: 'src/imports/1df8c8bc-0da2-4954-8865-09c160a68617.jpg',
+      src: settingsScreen,
       title: 'Settings',
       description: 'System configuration and preferences',
     },
     {
-      src: 'src/imports/2c0888e4-60f8-4509-b8e1-3eb35d48ca75.jpg',
+      src: profileManagementScreen,
       title: 'Profile Management',
       description: 'User account and profile settings',
     },
