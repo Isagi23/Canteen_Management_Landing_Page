@@ -71,7 +71,7 @@ export function Header() {
               onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'var(--primary-dark)'}
               onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'var(--primary)'}
             >
-              Download SDK
+              Download APK
             </button>
           </nav>
 
@@ -105,7 +105,7 @@ export function Header() {
               onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'var(--primary-dark)'}
               onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'var(--primary)'}
             >
-              Download SDK
+              Download APK
             </button>
           </nav>
         )}

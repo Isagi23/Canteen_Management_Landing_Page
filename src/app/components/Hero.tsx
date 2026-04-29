@@ -1,5 +1,6 @@
 import { ArrowRight, Download, Smartphone } from 'lucide-react';
 import { motion } from 'motion/react';
+import canteenAdminImage from '../../imports/welcome.jpg';
 
 export function Hero() {
   const scrollToSection = (id: string) => {
@@ -39,11 +40,11 @@ export function Hero() {
                 onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'var(--primary-dark)'}
                 onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'var(--primary)'}
               >
-                Download SDK
+                Download APK
                 <Download size={20} />
               </button>
               <button
-                onClick={() => scrollToSection('preview')}
+                onClick={() => window.open('https://drive.google.com/drive/folders/1erSDoukF099u461lOY6GfYoy-7C1rbse?usp=sharing', '_blank')}
                 className="inline-flex items-center justify-center gap-2 rounded-full border px-8 py-4 text-gray-700 transition-colors"
                 style={{ borderColor: 'rgba(15, 23, 42, 0.12)' }}
                 onMouseEnter={(e) => {
@@ -54,7 +55,7 @@ export function Hero() {
                 }}
               >
                 <Smartphone size={20} />
-                View demo
+                View Docs
               </button>
             </div>
             <div className="grid gap-3 sm:grid-cols-3 pt-4">
@@ -80,19 +81,15 @@ export function Hero() {
           >
             <div className="relative z-10 rounded-[2rem] border border-gray-200 bg-white p-5 shadow-[0_24px_80px_rgba(15,23,42,0.12)]">
               <div className="flex items-center justify-between rounded-2xl border border-gray-200 bg-gray-50 px-4 py-3 text-sm text-gray-600">
-                <span>Mobile app preview</span>
+                <span>Canteen Admin &amp; Order System</span>
                 <span className="rounded-full bg-white px-3 py-1 font-medium text-gray-900 shadow-sm">Ready to use</span>
               </div>
-              <div className="mt-4 aspect-[9/16] rounded-[1.5rem] flex items-center justify-center" style={{ background: 'linear-gradient(180deg, rgba(3,2,19,0.96) 0%, rgba(15,23,42,0.9) 100%)' }}>
-                <div className="flex flex-col items-center gap-4 px-8 text-center">
-                  <div className="flex h-24 w-24 items-center justify-center rounded-[2rem] bg-white/10 backdrop-blur-sm">
-                    <Smartphone size={72} className="text-white/90" />
-                  </div>
-                  <div className="space-y-1">
-                    <p className="text-sm uppercase tracking-[0.24em] text-white/60">Canteen suite</p>
-                    <p className="text-lg font-medium text-white">Fast, simple, and built for clarity.</p>
-                  </div>
-                </div>
+              <div className="mt-4 overflow-hidden rounded-[1.5rem] border border-gray-200 bg-[#111827] p-3">
+                <img
+                  src={canteenAdminImage}
+                  alt="Canteen Admin & Order System preview"
+                  className="h-full w-full rounded-[1.1rem] object-contain shadow-lg"
+                />
               </div>
             </div>
             <div className="absolute -top-6 -right-4 w-64 h-64 rounded-full blur-3xl opacity-25 -z-10" style={{ backgroundColor: 'var(--tertiary)' }}></div>
