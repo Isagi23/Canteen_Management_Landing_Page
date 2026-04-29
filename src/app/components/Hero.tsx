@@ -34,7 +34,14 @@ export function Hero() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <button
-                onClick={() => scrollToSection('features')}
+                onClick={() => {
+                  const link = document.createElement('a');
+                  link.href = '/Canteen_Management_Landing_Page/canteen-management-system.apk';
+                  link.download = 'canteen-management-system.apk';
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
+                }}
                 className="inline-flex items-center justify-center gap-2 rounded-full px-8 py-4 text-white transition-colors shadow-lg hover:shadow-xl"
                 style={{ backgroundColor: 'var(--primary)' }}
                 onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'var(--primary-dark)'}
